@@ -1,6 +1,6 @@
 # Sharat Acharja Mugdho — Portfolio
 
-Personal portfolio deployed at **https://sharatpsd.netlify.app/**.
+Personal portfolio deployed at **https://mugdho-dev.netlify.app/**.
 
 ## Stack
 
