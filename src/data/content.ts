@@ -17,7 +17,7 @@ export const profile = {
   links: {
     github: "https://github.com/Sharatpsd",
     linkedin: "https://www.linkedin.com/in/sharat-acharjya/",
-    resume: "https://drive.google.com/file/d/1uTY0w8l9ayhY6BN0Lpyy7NGOpfBuY-rq/view?usp=sharing",
+    resume: "/Sharat_Acharja_Mugdho_Resume.pdf",
   },
 } as const;
 

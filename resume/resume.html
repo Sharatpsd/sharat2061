@@ -1,0 +1,163 @@
+<!doctype html>
+<!--
+  One-page resume source. Export to PDF with:
+    npm run resume
+  (prints this page to public/Sharat_Acharja_Mugdho_Resume.pdf with headless Chrome)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sharat Acharja Mugdho — Resume</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/font/Serif/cmun-serif.css" />
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 9mm 13mm 6mm;
+    font-family: "Computer Modern Serif", "Latin Modern Roman", Georgia, serif;
+    font-size: 9.7pt;
+    line-height: 1.27;
+    color: #111;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { text-align: center; margin-bottom: 4pt; }
+  h1 { font-size: 17pt; font-weight: 700; letter-spacing: 0.02em; }
+  .role { font-weight: 700; font-size: 10.2pt; margin-top: 1pt; }
+  .place { font-size: 9pt; color: #333; margin-top: 1pt; }
+  .contact { margin-top: 3pt; font-size: 8.8pt; display: flex; justify-content: center; flex-wrap: wrap; gap: 0 6pt; }
+  .contact span { display: inline-flex; align-items: center; gap: 3pt; }
+  .contact .sep { color: #555; }
+  .contact svg { width: 8.6pt; height: 8.6pt; fill: currentColor; flex: none; }
+  .contact a { color: #0b3d91; }
+  h2 {
+    font-size: 13pt;
+    font-weight: 400;
+    border-bottom: 0.7pt solid #111;
+    padding-bottom: 1pt;
+    margin: 5.5pt 0 3pt;
+  }
+  p { text-align: justify; }
+  .skills div { margin: 0.4pt 0; }
+  .item { margin-top: 3pt; }
+  .item:first-of-type { margin-top: 0; }
+  .row { display: flex; justify-content: space-between; gap: 10pt; }
+  .row .right { white-space: nowrap; text-align: right; }
+  .sub { font-style: italic; }
+  .links a { color: #0b3d91; }
+  ul { margin: 1pt 0 0 0; padding-left: 11pt; }
+  li { margin: 0.4pt 0; }
+  li::marker { content: "• "; font-size: 9pt; }
+  .edu .row { margin: 0.6pt 0; }
+  b { font-weight: 700; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Sharat Acharja Mugdho</h1>
+    <div class="role">Junior Software Engineer · Odoo ERP Specialist</div>
+    <div class="place">Gulshan 1, Dhaka, Bangladesh</div>
+    <div class="contact">
+      <span><svg viewBox="0 0 512 512"><path d="M497.4 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.7 370.7 0 0 1 130.6 204.1l60.6-49.6a23.9 23.9 0 0 0 6.9-28l-48-112A24.2 24.2 0 0 0 122.6.6l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.3 24.3 0 0 0-14-27.6z"/></svg>+8801783720914</span>
+      <span class="sep">—</span>
+      <span><svg viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><a href="mailto:sharatacharjee6@gmail.com">sharatacharjee6@gmail.com</a></span>
+      <span class="sep">—</span>
+      <span><svg viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg><a href="https://github.com/Sharatpsd">GitHub</a></span>
+      <span class="sep">—</span>
+      <span><svg viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg><a href="https://www.linkedin.com/in/sharat-acharjya/">LinkedIn</a></span>
+      <span class="sep">—</span>
+      <span><svg viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg><a href="https://mugdho-dev.netlify.app/">mugdho-dev.netlify.app</a></span>
+    </div>
+  </header>
+
+  <h2>Professional Summary</h2>
+  <p>
+    Junior Software Engineer and Odoo ERP specialist at Betopia Group. I handle the company-wide HRMS and work across
+    all core Odoo modules: Accounting &amp; Invoicing, Sales &amp; CRM, Inventory &amp; Purchase, Manufacturing (MRP) and
+    Procurement, including custom modules and feature development. Strong background in Python, Django and Django REST
+    Framework, with working knowledge of React. I use AI coding agents (Claude, Codex) to plan, build and test faster.
+  </p>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><b>ERP (Odoo 19):</b> HRMS, Accounting &amp; Invoicing, Sales &amp; CRM, Inventory &amp; Purchase, Manufacturing (MRP), Procurement, Module Customization, Python ORM, XML Views, OWL</div>
+    <div><b>Backend:</b> Python, Django, Django REST Framework (DRF), REST API, JWT Authentication, Node.js</div>
+    <div><b>Frontend:</b> JavaScript, React, Vite, HTML, CSS, Tailwind CSS</div>
+    <div><b>Database:</b> PostgreSQL, MySQL, SQLite, Django ORM</div>
+    <div><b>Tools &amp; AI:</b> Git, GitHub, Postman, PyCharm, Docker (Basic), Figma, Claude, Codex</div>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="item">
+    <div class="row"><span><b>Junior Software Engineer</b> — <a href="https://betopiagroup.com/">Betopia Group</a>, ERP Team, Gulshan 1, Dhaka</span><span class="right">Oct 2026 – Present</span></div>
+    <ul>
+      <li>Handle the company-wide HRMS on Odoo: employees, attendance, leave, payroll and HR documents.</li>
+      <li>Build and customize features across Accounting &amp; Invoicing, Sales &amp; CRM, Inventory &amp; Purchase, MRP and Procurement.</li>
+      <li>Develop custom modules, dashboards, reports and approval workflows for in-house teams.</li>
+      <li>Maintain and improve the company ERP: fix issues, manage business logic and keep data consistent.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span><b>Trainee</b> — <a href="https://betopiagroup.com/">Betopia Group</a>, ERP Team</span><span class="right">Jul 2026 – Oct 2026</span></div>
+    <ul>
+      <li>Joined the ERP team and worked on Odoo modules for company use; promoted to Junior Software Engineer.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span><b>Python &amp; Django (Full-time)</b> — <a href="https://www.robotechvalley.com/">Robo Tech Valley</a>, Mirpur, Dhaka</span><span class="right">Jan 2026 – Jun 2026</span></div>
+    <ul>
+      <li>Built web projects with Python, Django and Django REST Framework.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span><b>Backend Developer Intern</b> — <a href="https://www.robotechvalley.com/">Robo Tech Valley</a>, Mirpur, Dhaka</span><span class="right links">Nov 2025 – Dec 2025 — <a href="https://drive.google.com/file/d/1Jw82jFGXPvliJHYxBPOUh6oIlpm-j8mE/view?usp=sharing">Certificate</a></span></div>
+    <ul>
+      <li>Developed RESTful APIs with Django REST Framework for an e-commerce system, with JWT and role-based access.</li>
+      <li>Worked with PostgreSQL and optimized ORM queries.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="item">
+    <div class="row"><span><b>Bite</b> — <span class="sub">Food Delivery Platform (Django REST + React)</span></span><span class="right links"><a href="https://github.com/Sharatpsd/Food-Delivery-App-">GitHub</a> — <a href="https://bite-bd.onrender.com/">Live Demo</a></span></div>
+    <ul>
+      <li>Multi-role platform with REST APIs, JWT login, cart and checkout, and dashboards for customers, restaurants and delivery staff.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span><b>Odoo Employee Management</b> — <span class="sub">Custom Odoo 19 Module</span></span><span class="right links"><a href="https://github.com/Sharatpsd/odoo-employee-management">GitHub</a></span></div>
+    <ul>
+      <li>Employees, departments, attendance, leave, documents and assets, with multi-step approval workflows and dashboards.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span><b>Daily Dairy Shop</b> — <span class="sub">E-Commerce Web Application (Django)</span></span><span class="right links"><a href="https://github.com/Sharatpsd/DailyDairyShop">GitHub</a> — <a href="https://dailydairyshop-3.onrender.com/">Live Demo</a></span></div>
+    <ul>
+      <li>Product catalog, cart, order workflow, custom admin panel and Cloudinary image handling.</li>
+    </ul>
+  </div>
+
+  <h2>Research</h2>
+  <div class="item">
+    <div class="row"><span><b>Explainable Deep Learning for Multi-Disease Ocular Classification and Myopia Severity Estimation</b></span><span class="right links"><a href="https://drive.google.com/file/d/1EkV9sDJQ2V4Pq7loVsDbD5z4v42Br2lD/view">Paper</a></span></div>
+    <ul>
+      <li>ResNet50 transfer learning on ODIR-5K with Grad-CAM and SHAP explanations. Mean AUC 0.8066, binary accuracy 84.95%.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="edu">
+    <div class="row"><span><b>B.Sc. in Computer Science &amp; Engineering</b> — Green University of Bangladesh</span><span class="right">Graduated: January 2026</span></div>
+    <div class="row"><span><b>HSC (Science)</b> — Bajitpur Government College, Kishoreganj</span><span class="right">2020 — GPA: 4.67</span></div>
+    <div class="row"><span><b>SSC (Science)</b> — Bajitpur Hafez Abdur Razzak Pilot High School, Kishoreganj</span><span class="right">2018 — GPA: 4.33</span></div>
+  </div>
+
+  <h2>Languages</h2>
+  <p>Bangla (Native), English (Professional)</p>
+</body>
+</html>

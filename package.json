@@ -7,7 +7,8 @@
     "dev": "vite",
     "github:snapshot": "node scripts/fetch-github.mjs",
     "build": "node scripts/fetch-github.mjs && tsc -p tsconfig.app.json && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "resume": "bash scripts/export-resume.sh"
   },
   "dependencies": {
     "gsap": "^3.13.0",
