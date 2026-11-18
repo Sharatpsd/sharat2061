@@ -62,7 +62,9 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <p className="muted">Dhaka, Bangladesh</p>
+          <p className="muted">
+            {profile.location}, {profile.country}
+          </p>
         </div>
       </div>
     </footer>

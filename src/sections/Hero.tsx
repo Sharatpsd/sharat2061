@@ -97,7 +97,7 @@ export function Hero({ ready }: { ready: boolean }) {
         </div>
 
         <div className="hero-main">
-          <p className="hero-kicker hero-reveal">{profile.specialty} · HRMS · Accounting · Sales</p>
+          <p className="hero-kicker hero-reveal">Odoo {profile.specialty} · All core modules</p>
           <h1 className="hero-name" id="hero-title">
             <span className="hero-line">
               <SplitText text="Sharat Acharja" by="chars" />
@@ -124,6 +124,26 @@ export function Hero({ ready }: { ready: boolean }) {
               Download resume
             </a>
           </div>
+          <ul className="hero-social hero-reveal" aria-label="Find me online">
+            <li>
+              <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
+                <Icon name="github" size={17} />
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
+                <Icon name="linkedin" size={16} />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${profile.email}`}>
+                <Icon name="mail" size={17} />
+                {profile.email}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 

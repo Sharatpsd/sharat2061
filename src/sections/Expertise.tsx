@@ -8,7 +8,12 @@ const symbols: Record<string, string> = {
   "XML Views": "Xv",
   OWL: "Ow",
   Accounting: "Ac",
-  Sales: "Sa",
+  "Sales & CRM": "Sa",
+  Inventory: "In",
+  Purchase: "Pu",
+  MRP: "Mr",
+  Procurement: "Pr",
+  Customization: "Cu",
   "Workflow Automation": "Wf",
   Claude: "Cl",
   Codex: "Cx",
@@ -52,7 +57,7 @@ export function Expertise() {
     <section className="section expertise" id="expertise" aria-labelledby="expertise-title">
       <div className="container">
         <SectionHead
-          index="05"
+          index="06"
           label="Technical expertise"
           id="expertise-title"
           title="The tools I use every day."

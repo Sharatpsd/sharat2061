@@ -10,8 +10,9 @@ export const profile = {
   organization: "Betopia Group",
   organizationUrl: "https://betopiagroup.com/",
   department: "ERP Team · IT & Infrastructure",
-  location: "Dhaka, Bangladesh",
-  tagline: "I build and run ERP systems with Odoo, Python and Django. Simple, reliable software that companies use every day.",
+  location: "Gulshan 1, Dhaka",
+  country: "Bangladesh",
+  tagline: "I build and customize Odoo ERP for real companies: HR, accounting, sales, inventory, manufacturing and more.",
   email: "sharatacharjee6@gmail.com",
   links: {
     github: "https://github.com/Sharatpsd",
@@ -23,6 +24,7 @@ export const profile = {
 export const nav = [
   { id: "about", label: "About" },
   { id: "erp", label: "ERP" },
+  { id: "activity", label: "GitHub" },
   { id: "experience", label: "Experience" },
   { id: "work", label: "Work" },
   { id: "contact", label: "Contact" },
@@ -32,7 +34,7 @@ export const about = {
   statement:
     "I build software that companies use every day. Today, that means the ERP system for all of Betopia Group.",
   paragraphs: [
-    "I am a software engineer and ERP specialist at Betopia Group. I handle the company-wide HRMS on Odoo and build features for Accounting and Sales.",
+    "I am a software engineer and Odoo ERP specialist at Betopia Group. I handle the HRMS for the whole company and work across all core modules: Accounting, Sales, Inventory, Purchase, Manufacturing and Procurement.",
     "I started with web projects in Python and Django at Robo Tech Valley. Now I work in-house, building new features and improving the systems our teams rely on.",
     "I write Python every day and I am comfortable with JavaScript frameworks like React. I also work well with AI coding agents such as Claude and Codex, which help me plan, build and test faster.",
     "I hold a B.Sc. in Computer Science & Engineering from Green University of Bangladesh (2026).",
@@ -54,12 +56,15 @@ export const about = {
 };
 
 export const erp = {
-  core: [
-    { name: "HRMS", body: "The full HR system for the whole company: employees, attendance, leave, payroll and HR documents." },
-    { name: "Accounting", body: "Key accounting features and the business rules behind them." },
-    { name: "Sales", body: "Key sales features, from orders to reports." },
+  modules: [
+    { name: "HRMS", short: "HRMS", body: "HR for the whole company: employees, attendance, leave and payroll." },
+    { name: "Accounting & Invoicing", short: "Accounting", body: "Accounts, invoices, payments and financial reports." },
+    { name: "Sales & CRM", short: "Sales & CRM", body: "Leads, quotations, orders and customers." },
+    { name: "Inventory & Purchase", short: "Inventory", body: "Stock, warehouses, vendors and purchase orders." },
+    { name: "Manufacturing (MRP)", short: "MRP", body: "Bills of materials, work orders and production." },
+    { name: "Procurement", short: "Procurement", body: "Requisitions, approvals and procurement KPIs." },
   ],
-  related: ["Attendance", "Leave", "Payroll", "HR Documents", "Approvals", "Dashboards", "Reports", "Procurement KPIs"],
+  customization: "I also customize any module: new fields, screens, reports, workflows and integrations.",
 };
 
 export type Role = {
@@ -83,16 +88,16 @@ export const experience: Role[] = [
     unit: "ERP Team",
     period: "15 October 2026 – Present",
     current: true,
-    summary: "Promoted to Junior Software Engineer. I handle the HRMS for the whole company and build features for Accounting and Sales.",
+    summary: "Promoted to Junior Software Engineer. I handle the HRMS for the whole company and work across all core Odoo modules.",
     points: [
       "Company-wide HRMS on Odoo",
-      "Accounting features",
-      "Sales features",
-      "New in-house features",
+      "Accounting & Invoicing",
+      "Sales & CRM",
+      "Inventory & Purchase",
+      "Manufacturing (MRP)",
+      "Procurement",
+      "Custom modules and features",
       "Dashboards and reports",
-      "Workflow automation",
-      "Fixes and improvements",
-      "Database and business logic",
     ],
     tags: ["Odoo", "Python", "XML", "OWL", "PostgreSQL"],
   },
@@ -134,8 +139,8 @@ export const skills: SkillGroup[] = [
   {
     key: "erp",
     title: "ERP",
-    note: "My main work: Odoo modules for HR, accounting and sales.",
-    items: ["Odoo 19", "HRMS", "Accounting", "Sales", "Python ORM", "XML Views", "OWL", "Workflow Automation"],
+    note: "My main work: all core Odoo modules, plus custom ones.",
+    items: ["Odoo 19", "HRMS", "Accounting", "Sales & CRM", "Inventory", "Purchase", "MRP", "Procurement", "Customization", "Python ORM", "XML Views", "OWL"],
   },
   {
     key: "backend",
@@ -227,16 +232,16 @@ export const projects: Project[] = [
     id: "erp",
     index: "03",
     kind: "Company work · Betopia Group",
-    title: "Company-wide ERP: HRMS, Accounting & Sales",
+    title: "Company-wide Odoo ERP",
     description:
-      "I handle the HRMS for the whole of Betopia Group on Odoo, and build key features for Accounting and Sales.",
+      "I handle the HRMS for the whole of Betopia Group and work on Accounting, Sales, Inventory, Purchase, Manufacturing and Procurement.",
     stack: ["Odoo", "Python", "XML", "OWL", "PostgreSQL"],
     contributions: [
       "HRMS for the whole company",
-      "Attendance, leave and payroll",
-      "HR documents and approvals",
-      "Accounting and sales features",
-      "Dashboards, KPIs and reports",
+      "Accounting, sales and CRM features",
+      "Inventory, purchase and procurement flows",
+      "Manufacturing (MRP) work",
+      "Custom modules, dashboards and reports",
     ],
     links: [],
     note: "Company work is private. No code, screenshots or business data are shown.",

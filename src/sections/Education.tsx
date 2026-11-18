@@ -5,7 +5,7 @@ export function Education() {
   return (
     <section className="section education" id="education" aria-labelledby="education-title">
       <div className="container">
-        <SectionHead index="07" label="Education" id="education-title" title="Education." />
+        <SectionHead index="08" label="Education" id="education-title" title="Education." />
         <ol className="ledger">
           {education.map((e, i) => (
             <li key={e.school} className={`ledger-row reveal${i === 0 ? " is-major" : ""}`}>

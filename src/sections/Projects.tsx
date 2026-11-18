@@ -174,7 +174,7 @@ export function Projects() {
     <section ref={root} className="section projects" id="work" aria-labelledby="work-title">
       <div className="container">
         <SectionHead
-          index="04"
+          index="05"
           label="Selected work"
           id="work-title"
           title="Featured projects."

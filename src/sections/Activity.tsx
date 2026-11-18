@@ -85,7 +85,7 @@ export function Activity() {
     <section ref={root} className="section activity" id="activity" aria-labelledby="activity-title">
       <div className="container">
         <SectionHead
-          index="08"
+          index="03"
           label="Development activity"
           id="activity-title"
           title="My GitHub activity."

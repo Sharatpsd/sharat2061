@@ -48,12 +48,12 @@ export default function App() {
         <Hero ready={ready} />
         <About />
         <ErpGalaxy />
+        <Activity />
         <Experience />
         <Projects />
         <Expertise />
         <Services />
         <Education />
-        <Activity />
         <Contact />
       </main>
       <Footer />

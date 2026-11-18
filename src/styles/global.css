@@ -831,6 +831,35 @@ a:hover .roll::after {
   gap: 12px 20px;
   margin-top: 8px;
 }
+.hero-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  max-width: 600px;
+}
+.hero-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: rgba(16, 16, 18, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  transition: color 0.3s, border-color 0.3s, background 0.3s, transform 0.5s var(--ease);
+}
+.hero-social a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
 .scroll-cue {
   position: absolute;
   right: calc(var(--gutter) * 0.35);
@@ -1001,13 +1030,16 @@ a:hover .roll::after {
   font-size: clamp(2.4rem, 1.6rem + 3vw, 4.5rem);
 }
 .erp-core-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
   border-top: 1px solid var(--line);
 }
 .erp-core-list li {
   display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 8px;
-  padding: 20px 0;
+  grid-template-columns: 34px 1fr;
+  gap: 6px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
   transition: padding 0.5s var(--ease);
 }
@@ -1018,16 +1050,17 @@ a:hover .roll::after {
   font-family: var(--mono);
   font-size: 0.75rem;
   color: var(--accent);
-  padding-top: 8px;
+  padding-top: 5px;
 }
 .erp-core-list h3 {
-  font-size: var(--fs-xl);
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 .erp-core-list p {
-  margin-top: 6px;
+  margin-top: 4px;
+  font-size: var(--fs-sm);
   color: var(--muted);
 }
 .erp-related {
@@ -1141,6 +1174,10 @@ a:hover .roll::after {
   border-color: rgba(255, 106, 61, 0.55);
   background: linear-gradient(160deg, rgba(255, 106, 61, 0.22), rgba(20, 20, 22, 0.95) 70%);
   box-shadow: 0 0 30px -6px rgba(255, 106, 61, 0.45);
+}
+.gx-ring-2 .gx-core-node .gx-label {
+  padding: 8px 14px;
+  font-size: clamp(0.6875rem, 2.6cqi, 0.9375rem);
 }
 .gx-core-node.is-on .gx-label {
   background: var(--accent);
@@ -2867,9 +2904,12 @@ rect.heat:hover {
   .gx-ring-2 .gx-node {
     transform: rotate(var(--a)) translateX(46cqi) rotate(calc(-1 * var(--a)));
   }
-  .gx-ring-2 .gx-label {
-    font-size: 0.5625rem;
-    padding: 4px 8px;
+  .erp-core-list {
+    grid-template-columns: 1fr;
+  }
+  .gx-ring-2 .gx-core-node .gx-label {
+    font-size: 0.6875rem;
+    padding: 6px 10px;
   }
   .gx-paths circle:last-child {
     r: 46px;

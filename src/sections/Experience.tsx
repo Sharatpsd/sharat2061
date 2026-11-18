@@ -44,7 +44,7 @@ export function Experience() {
         <div className="experience-aside">
           <div className="experience-sticky">
             <SectionHead
-              index="03"
+              index="04"
               label="Career journey"
               id="experience-title"
               title="From Django projects to company-wide ERP."

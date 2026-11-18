@@ -7,9 +7,9 @@ import city1100 from "@/assets/img/city-1100.webp";
 const facts = [
   ["Role", profile.title],
   ["Company", profile.organization],
-  ["Focus", "ERP: HRMS, Accounting, Sales"],
+  ["Focus", "Odoo ERP: all core modules"],
   ["Education", "B.Sc. in CSE, Green University (2026)"],
-  ["Based in", profile.location],
+  ["Office", `${profile.location}, ${profile.country}`],
 ];
 
 export function About() {

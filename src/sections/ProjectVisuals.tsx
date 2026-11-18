@@ -92,10 +92,10 @@ export function OdooVisual() {
 const modules = [
   { label: "HRMS", x: 50, y: 12 },
   { label: "Accounting", x: 88, y: 30 },
-  { label: "Sales", x: 88, y: 70 },
-  { label: "Payroll", x: 50, y: 88 },
-  { label: "Attendance & Leave", x: 12, y: 70 },
-  { label: "Dashboards & KPIs", x: 12, y: 30 },
+  { label: "Sales & CRM", x: 88, y: 70 },
+  { label: "Manufacturing", x: 50, y: 88 },
+  { label: "Inventory & Purchase", x: 12, y: 70 },
+  { label: "Procurement", x: 12, y: 30 },
 ];
 
 export function ErpVisual() {
