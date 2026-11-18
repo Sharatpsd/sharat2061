@@ -90,12 +90,12 @@ export function OdooVisual() {
 }
 
 const modules = [
-  { label: "Employee Management", x: 50, y: 12 },
-  { label: "Attendance", x: 88, y: 30 },
-  { label: "Leave", x: 88, y: 70 },
-  { label: "Payroll", x: 50, y: 88 },
-  { label: "HR Documents", x: 12, y: 70 },
-  { label: "Dashboards & KPIs", x: 12, y: 30 },
+  { label: "HRMS", x: 50, y: 12 },
+  { label: "Accounting", x: 88, y: 30 },
+  { label: "Sales & CRM", x: 88, y: 70 },
+  { label: "Manufacturing", x: 50, y: 88 },
+  { label: "Inventory & Purchase", x: 12, y: 70 },
+  { label: "Procurement", x: 12, y: 30 },
 ];
 
 export function ErpVisual() {
@@ -109,7 +109,7 @@ export function ErpVisual() {
       </svg>
       <div className="erp-core">
         <span className="erp-core-label">Odoo ERP</span>
-        <span className="erp-core-sub">HRMS · Workflows · Reporting</span>
+        <span className="erp-core-sub">Whole company</span>
       </div>
       {modules.map((m, i) => (
         <span key={m.label} className="erp-node" style={{ left: `${m.x}%`, top: `${m.y}%`, ["--i" as string]: i }}>
@@ -121,7 +121,7 @@ export function ErpVisual() {
           <rect x="5" y="11" width="14" height="9" rx="2" />
           <path d="M8 11V8a4 4 0 0 1 8 0v3" />
         </svg>
-        Confidential — illustration only
+        Private work · illustration only
       </span>
     </div>
   );

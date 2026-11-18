@@ -7,7 +7,16 @@ const symbols: Record<string, string> = {
   "Python ORM": "Or",
   "XML Views": "Xv",
   OWL: "Ow",
-  "ERP Customization": "Ec",
+  Accounting: "Ac",
+  "Sales & CRM": "Sa",
+  Inventory: "In",
+  Purchase: "Pu",
+  MRP: "Mr",
+  Procurement: "Pr",
+  Customization: "Cu",
+  "Workflow Automation": "Wf",
+  Claude: "Cl",
+  Codex: "Cx",
   HRMS: "Hr",
   "Business Workflow Automation": "Wf",
   Django: "Dj",
@@ -48,11 +57,11 @@ export function Expertise() {
     <section className="section expertise" id="expertise" aria-labelledby="expertise-title">
       <div className="container">
         <SectionHead
-          index="04"
+          index="06"
           label="Technical expertise"
           id="expertise-title"
-          title="A focused toolkit, used every day."
-          lede="No percentages or self-scored bars. These are the technologies I actually build with, grouped by where they fit."
+          title="The tools I use every day."
+          lede="No skill bars or scores. Just the tools I really use, grouped by area."
         />
 
         <div className="expertise-layout">
@@ -74,7 +83,7 @@ export function Expertise() {
               </button>
             ))}
             <p className="expertise-note" aria-live="polite">
-              {current ? current.note : "Hover or select an area to see how each part of the toolkit is used."}
+              {current ? current.note : "Select an area to see how I use it."}
             </p>
           </div>
 

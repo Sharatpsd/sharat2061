@@ -85,11 +85,11 @@ export function Activity() {
     <section ref={root} className="section activity" id="activity" aria-labelledby="activity-title">
       <div className="container">
         <SectionHead
-          index="07"
+          index="03"
           label="Development activity"
           id="activity-title"
-          title="Shipping, in public."
-          lede={`Live data from my public GitHub profile, refreshed on every deploy. Last updated ${updated}.`}
+          title="My GitHub activity."
+          lede={`Real data from my public GitHub profile, updated on every deploy. Last update: ${updated}.`}
         />
 
         <div className="activity-stats">

@@ -4,16 +4,9 @@ import { gsap, prefersReducedMotion, scrollToTarget } from "@/lib/motion";
 import { SplitText } from "@/components/SplitText";
 import { Magnetic } from "@/components/Magnetic";
 import { Icon } from "@/components/Icon";
-
-const orbitNodes = [
-  { label: "Odoo", r: 0, a: -10 },
-  { label: "Python", r: 1, a: -95 },
-  { label: "PostgreSQL", r: 2, a: -140 },
-  { label: "Django", r: 2, a: -45 },
-  { label: "React", r: 2, a: 22 },
-  { label: "REST", r: 1, a: -165 },
-];
-const radii = [120, 190, 260];
+import portrait560 from "@/assets/img/portrait-560.webp";
+import portrait900 from "@/assets/img/portrait-900.webp";
+import portrait1024 from "@/assets/img/portrait-1024.webp";
 
 function DhakaTime() {
   const fmt = () =>
@@ -35,8 +28,7 @@ export function Hero({ ready }: { ready: boolean }) {
     const ctx = gsap.context(() => {
       gsap.set(".hero .split-char", { yPercent: 115 });
       gsap.set(".hero-reveal", { autoAlpha: 0, y: 24 });
-      gsap.set(".orbit-ring", { strokeDasharray: 1, strokeDashoffset: 1 });
-      gsap.set(".orbit-node", { autoAlpha: 0, scale: 0.6 });
+      gsap.set(".hero-photo", { autoAlpha: 0, scale: 1.12 });
     }, root);
     return () => ctx.revert();
   }, []);
@@ -45,20 +37,19 @@ export function Hero({ ready }: { ready: boolean }) {
     if (!ready || prefersReducedMotion()) return;
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.05 });
-      tl.to(".hero-name .split-char", { yPercent: 0, duration: 1.4, stagger: 0.028 })
-        .to(".hero-reveal", { autoAlpha: 1, y: 0, duration: 1.1, stagger: 0.08 }, 0.45)
-        .to(".orbit-ring", { strokeDashoffset: 0, duration: 2, stagger: 0.15, ease: "power3.inOut" }, 0.2)
-        .to(".orbit-node", { autoAlpha: 1, scale: 1, duration: 0.9, stagger: 0.07, ease: "back.out(2)" }, 0.9);
+      tl.to(".hero-photo", { autoAlpha: 1, scale: 1, duration: 2.2, ease: "expo.out" }, 0)
+        .to(".hero-name .split-char", { yPercent: 0, duration: 1.4, stagger: 0.028 }, 0.15)
+        .to(".hero-reveal", { autoAlpha: 1, y: 0, duration: 1.1, stagger: 0.08 }, 0.55);
 
-      // Scroll-out: name drifts and softens, the orbit turns.
+      // Scroll-out: text drifts up and fades, the photo sinks slowly behind it.
       gsap.to(".hero-inner", {
-        yPercent: -14,
-        autoAlpha: 0.15,
+        yPercent: -16,
+        autoAlpha: 0.1,
         ease: "none",
         scrollTrigger: { trigger: root.current, start: "top top", end: "bottom top", scrub: true },
       });
-      gsap.to(".orbit-spin", {
-        rotate: 40,
+      gsap.to(".hero-photo-wrap", {
+        yPercent: 14,
         ease: "none",
         scrollTrigger: { trigger: root.current, start: "top top", end: "bottom top", scrub: true },
       });
@@ -74,71 +65,58 @@ export function Hero({ ready }: { ready: boolean }) {
   return (
     <section ref={root} className="hero" id="top" aria-labelledby="hero-title">
       <div className="hero-bg" aria-hidden="true">
-        <div className="hero-grid" />
+        <div className="hero-photo-wrap">
+          <img
+            className="hero-photo"
+            src={portrait1024}
+            srcSet={`${portrait560} 560w, ${portrait900} 900w, ${portrait1024} 1024w`}
+            sizes="(max-width: 760px) 100vw, 52vw"
+            width={1024}
+            height={1536}
+            alt=""
+            {...{ fetchpriority: "high" }}
+            decoding="async"
+          />
+        </div>
+        <div className="hero-shade" />
         <div className="hero-glow" />
-        <svg className="orbit" viewBox="-300 -300 600 600">
-          <g className="orbit-spin">
-            {radii.map((r) => (
-              <circle key={r} className="orbit-ring" r={r} pathLength={1} />
-            ))}
-            {orbitNodes.map((n) => {
-              const rad = (n.a * Math.PI) / 180;
-              const x = Math.cos(rad) * radii[n.r];
-              const y = Math.sin(rad) * radii[n.r];
-              return (
-                <g key={n.label} className="orbit-node" transform={`translate(${x.toFixed(1)} ${y.toFixed(1)})`}>
-                  <circle r="3.5" />
-                  <text x="10" y="4">
-                    {n.label}
-                  </text>
-                </g>
-              );
-            })}
-            <circle className="orbit-core" r="5" />
-          </g>
-        </svg>
       </div>
 
       <div className="hero-inner container">
         <div className="hero-meta">
           <p className="status hero-reveal">
             <span className="dot-live" aria-hidden="true" />
-            Currently at {profile.organization}
+            {profile.title} at{" "}
+            <a href={profile.organizationUrl} target="_blank" rel="noopener noreferrer">
+              {profile.organization}
+            </a>
           </p>
           <p className="hero-local hero-reveal">
             {profile.location} · <DhakaTime />
           </p>
         </div>
 
-        <h1 className="hero-name" id="hero-title">
-          <span className="hero-line">
-            <SplitText text="Sharat Acharja" by="chars" />
-          </span>
-          {" "}
-          <span className="hero-line hero-line-2">
-            <span className="hero-role hero-reveal" aria-hidden="true">
-              <span>{profile.title}</span>
-              <span className="muted">ERP · Backend · Full-Stack</span>
+        <div className="hero-main">
+          <p className="hero-kicker hero-reveal">Odoo {profile.specialty} · All core modules</p>
+          <h1 className="hero-name" id="hero-title">
+            <span className="hero-line">
+              <SplitText text="Sharat Acharja" by="chars" />
+            </span>{" "}
+            <span className="hero-line">
+              <SplitText text="Mugdho" by="chars" className="serif" />
             </span>
-            <SplitText text="Mugdho" by="chars" className="serif" />
-          </span>
-        </h1>
-
-        <div className="hero-foot">
-          <p className="hero-tagline hero-reveal">
-            <span className="sr-only">{profile.title}. </span>
-            {profile.tagline}
-          </p>
+          </h1>
+          <p className="hero-tagline hero-reveal">{profile.tagline}</p>
           <div className="hero-ctas hero-reveal">
             <Magnetic>
               <a href="#work" className="btn btn-primary" onClick={go("work")}>
-                Explore my work
+                See my work
                 <Icon name="arrow" />
               </a>
             </Magnetic>
             <Magnetic>
               <a href="#contact" className="btn btn-ghost" onClick={go("contact")}>
-                Let&rsquo;s connect
+                Contact me
               </a>
             </Magnetic>
             <a className="link-underline" href={profile.links.resume} target="_blank" rel="noopener noreferrer">
@@ -146,6 +124,26 @@ export function Hero({ ready }: { ready: boolean }) {
               Download resume
             </a>
           </div>
+          <ul className="hero-social hero-reveal" aria-label="Find me online">
+            <li>
+              <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
+                <Icon name="github" size={17} />
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
+                <Icon name="linkedin" size={16} />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${profile.email}`}>
+                <Icon name="mail" size={17} />
+                {profile.email}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 

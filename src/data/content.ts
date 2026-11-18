@@ -6,11 +6,13 @@ export const profile = {
   name: "Sharat Acharja Mugdho",
   firstName: "Sharat",
   title: "Junior Software Engineer",
+  specialty: "ERP Specialist",
   organization: "Betopia Group",
-  department: "IT & Infrastructure (ERP, Cyber Security & MIS)",
-  location: "Dhaka, Bangladesh",
-  tagline:
-    "Building intelligent business solutions, scalable software, and meaningful digital experiences.",
+  organizationUrl: "https://betopiagroup.com/",
+  department: "ERP Team · IT & Infrastructure",
+  location: "Gulshan 1, Dhaka",
+  country: "Bangladesh",
+  tagline: "I build and customize Odoo ERP for real companies: HR, accounting, sales, inventory, manufacturing and more.",
   email: "sharatacharjee6@gmail.com",
   links: {
     github: "https://github.com/Sharatpsd",
@@ -21,42 +23,56 @@ export const profile = {
 
 export const nav = [
   { id: "about", label: "About" },
+  { id: "erp", label: "ERP" },
+  { id: "activity", label: "GitHub" },
   { id: "experience", label: "Experience" },
   { id: "work", label: "Work" },
-  { id: "expertise", label: "Expertise" },
   { id: "contact", label: "Contact" },
 ] as const;
 
 export const about = {
   statement:
-    "I build software that businesses run on: ERP systems, backend services and web applications designed around how real teams actually work.",
+    "I build software that companies use every day. Today, that means the ERP system for all of Betopia Group.",
   paragraphs: [
-    "I am a Software Engineer focused on building scalable software solutions, business applications, ERP systems and modern web experiences.",
-    "Today I work as a Junior Software Engineer at Betopia Group, in the IT & Infrastructure department that covers ERP, Cyber Security and MIS. Most of my days are spent inside Odoo: developing modules, customizing HRMS workflows and turning business processes into dependable software.",
-    "My experience spans Odoo ERP, Python, Django, REST APIs, database management, business process automation and frontend technologies. I graduated in Computer Science & Engineering from Green University of Bangladesh in 2026.",
+    "I am a software engineer and Odoo ERP specialist at Betopia Group. I handle the HRMS for the whole company and work across all core modules: Accounting, Sales, Inventory, Purchase, Manufacturing and Procurement.",
+    "I started with web projects in Python and Django at Robo Tech Valley. Now I work in-house, building new features and improving the systems our teams rely on.",
+    "I write Python every day and I am comfortable with JavaScript frameworks like React. I also work well with AI coding agents such as Claude and Codex, which help me plan, build and test faster.",
+    "I hold a B.Sc. in Computer Science & Engineering from Green University of Bangladesh (2026).",
   ],
   principles: [
     {
-      title: "Understand the workflow first",
-      body: "Good business software starts with how people actually work. I map the process before I write the model.",
+      title: "Understand the need first",
+      body: "I learn how people work before I write any code.",
     },
     {
-      title: "Clean architecture, practical choices",
-      body: "Clear data models, readable business logic and APIs that are easy to extend when requirements change.",
+      title: "Keep it clean and simple",
+      body: "Clear data, clear logic, and code that is easy to change.",
     },
     {
-      title: "Built to scale and to last",
-      body: "I care about maintainability as much as delivery, so the system keeps working long after release day.",
+      title: "Build to last",
+      body: "Software that keeps working well long after launch.",
     },
   ],
 };
 
+export const erp = {
+  modules: [
+    { name: "HRMS", short: "HRMS", body: "HR for the whole company: employees, attendance, leave and payroll." },
+    { name: "Accounting & Invoicing", short: "Accounting", body: "Accounts, invoices, payments and financial reports." },
+    { name: "Sales & CRM", short: "Sales & CRM", body: "Leads, quotations, orders and customers." },
+    { name: "Inventory & Purchase", short: "Inventory", body: "Stock, warehouses, vendors and purchase orders." },
+    { name: "Manufacturing (MRP)", short: "MRP", body: "Bills of materials, work orders and production." },
+    { name: "Procurement", short: "Procurement", body: "Requisitions, approvals and procurement KPIs." },
+  ],
+  customization: "I also customize any module: new fields, screens, reports, workflows and integrations.",
+};
+
 export type Role = {
   company: string;
+  companyUrl?: string;
   role: string;
   unit?: string;
   period: string;
-  start: string;
   current?: boolean;
   summary: string;
   points?: string[];
@@ -67,39 +83,49 @@ export type Role = {
 export const experience: Role[] = [
   {
     company: "Betopia Group",
+    companyUrl: "https://betopiagroup.com/",
     role: "Junior Software Engineer",
-    unit: "IT & Infrastructure (ERP, Cyber Security & MIS)",
-    period: "July 2026 – Present",
-    start: "2026",
+    unit: "ERP Team",
+    period: "15 October 2026 – Present",
     current: true,
-    summary:
-      "Developing and maintaining enterprise ERP software on Odoo, with a focus on HRMS and business workflow automation.",
+    summary: "Promoted to Junior Software Engineer. I handle the HRMS for the whole company and work across all core Odoo modules.",
     points: [
-      "Odoo ERP development",
-      "HRMS development and customization",
-      "Business workflow automation",
-      "ERP module development",
-      "Dashboard development",
-      "Backend engineering",
-      "Database and business logic management",
-      "Enterprise software maintenance and improvements",
+      "Company-wide HRMS on Odoo",
+      "Accounting & Invoicing",
+      "Sales & CRM",
+      "Inventory & Purchase",
+      "Manufacturing (MRP)",
+      "Procurement",
+      "Custom modules and features",
+      "Dashboards and reports",
     ],
+    tags: ["Odoo", "Python", "XML", "OWL", "PostgreSQL"],
+  },
+  {
+    company: "Betopia Group",
+    companyUrl: "https://betopiagroup.com/",
+    role: "Trainee",
+    unit: "ERP Team",
+    period: "15 July 2026 – 14 October 2026",
+    summary: "Joined the ERP team and worked on Odoo modules for company use.",
+    tags: ["Odoo", "Python", "PostgreSQL"],
   },
   {
     company: "Robo Tech Valley",
-    role: "Employee",
+    companyUrl: "https://www.robotechvalley.com/",
+    role: "Python & Django",
+    unit: "Full-time",
     period: "January 2026 – June 2026",
-    start: "2026",
-    summary: "Continued at Robo Tech Valley as an employee after completing the internship.",
-    tags: ["Django", "Django REST Framework", "PostgreSQL", "REST API"],
+    summary: "Built web projects with Python and Django.",
+    tags: ["Python", "Django", "Django REST Framework", "PostgreSQL"],
   },
   {
     company: "Robo Tech Valley",
+    companyUrl: "https://www.robotechvalley.com/",
     role: "Internship",
     period: "November 2025 – December 2025",
-    start: "2025",
-    summary: "Started my professional journey with backend development using Django and Django REST Framework.",
-    tags: ["Django", "DRF", "PostgreSQL", "JWT"],
+    summary: "Started my career with backend work in Python and Django.",
+    tags: ["Python", "Django", "DRF"],
     link: {
       label: "Internship certificate",
       href: "https://drive.google.com/file/d/1Jw82jFGXPvliJHYxBPOUh6oIlpm-j8mE/view?usp=sharing",
@@ -112,38 +138,44 @@ export type SkillGroup = { key: string; title: string; note: string; items: stri
 export const skills: SkillGroup[] = [
   {
     key: "erp",
-    title: "ERP & Enterprise",
-    note: "My daily work: modelling business processes in Odoo and shipping them as maintainable modules.",
-    items: ["Odoo 19", "Python ORM", "XML Views", "OWL", "ERP Customization", "HRMS", "Business Workflow Automation"],
+    title: "ERP",
+    note: "My main work: all core Odoo modules, plus custom ones.",
+    items: ["Odoo 19", "HRMS", "Accounting", "Sales & CRM", "Inventory", "Purchase", "MRP", "Procurement", "Customization", "Python ORM", "XML Views", "OWL"],
   },
   {
     key: "backend",
     title: "Backend",
-    note: "APIs and services with clear contracts, authentication and well-structured business logic.",
+    note: "APIs and server code with clean structure and secure login.",
     items: ["Django", "Django REST Framework", "REST API", "Node.js"],
   },
   {
     key: "frontend",
     title: "Frontend",
-    note: "Responsive interfaces that connect cleanly to the APIs behind them.",
+    note: "Clean, responsive screens that connect to the backend.",
     items: ["React.js", "Vite", "HTML5", "CSS3", "Tailwind CSS"],
   },
   {
     key: "languages",
-    title: "Programming",
-    note: "Python for backend and ERP work, JavaScript across the frontend.",
+    title: "Languages",
+    note: "Python every day, JavaScript for the frontend.",
     items: ["Python", "JavaScript"],
+  },
+  {
+    key: "ai",
+    title: "AI Agents",
+    note: "I use AI coding agents to plan, build and test faster, and I review every change.",
+    items: ["Claude", "Codex"],
   },
   {
     key: "database",
     title: "Database",
-    note: "Relational data modelling and the queries business logic depends on.",
+    note: "Data models and queries that business logic depends on.",
     items: ["PostgreSQL"],
   },
   {
     key: "tools",
     title: "Tools",
-    note: "The everyday toolkit for building, testing and shipping.",
+    note: "My daily tools to build, test and ship.",
     items: ["Git", "GitHub", "PyCharm", "Postman", "Figma"],
   },
 ];
@@ -164,16 +196,16 @@ export const projects: Project[] = [
   {
     id: "bite",
     index: "01",
-    kind: "Full-stack web application",
+    kind: "Full-stack web app",
     title: "Bite — Food Delivery App",
     description:
-      "A full-stack food delivery application built with Django REST Framework and React, modelled on the workflow of real delivery platforms for the Bangladesh market.",
+      "A full-stack food delivery app built with Django REST Framework and React, made for the Bangladesh market.",
     stack: ["Django", "Django REST Framework", "React", "Vite", "PostgreSQL", "REST API"],
     contributions: [
-      "REST API design with JWT authentication",
-      "Restaurant browsing, menus, cart and multi-step checkout",
-      "Separate dashboards for customers, restaurant owners and delivery staff",
-      "Restaurant partner onboarding flow",
+      "REST API with JWT login",
+      "Restaurants, menus, cart and checkout",
+      "Dashboards for customers, restaurant owners and delivery staff",
+      "Restaurant partner sign-up",
     ],
     links: [
       { label: "Live site", href: "https://bite-bd.onrender.com/" },
@@ -186,47 +218,47 @@ export const projects: Project[] = [
     kind: "ERP module",
     title: "Odoo Employee Management System",
     description:
-      "A custom employee management module developed with Odoo 19, demonstrating ERP customization, ORM operations, employee data management and custom business workflows.",
+      "A custom Odoo 19 module to manage employees, with ORM operations and custom business workflows.",
     stack: ["Odoo 19", "Python", "XML", "PostgreSQL", "Odoo ORM"],
     contributions: [
-      "Employee, department and designation models built on the Odoo ORM",
-      "Attendance, leave, document and asset management",
-      "Configurable multi-step approval workflows",
-      "Kanban, list and form views plus dashboards in XML",
+      "Employee, department and designation models",
+      "Attendance, leave, documents and assets",
+      "Multi-step approval workflows",
+      "Kanban, list and form views, plus dashboards",
     ],
     links: [{ label: "Source code", href: "https://github.com/Sharatpsd/odoo-employee-management" }],
   },
   {
     id: "erp",
     index: "03",
-    kind: "Professional work · Betopia Group",
-    title: "Enterprise ERP & HRMS Development",
+    kind: "Company work · Betopia Group",
+    title: "Company-wide Odoo ERP",
     description:
-      "Building and customizing enterprise ERP solutions on Odoo as part of Betopia Group's IT & Infrastructure team, across the HR lifecycle and management reporting.",
+      "I handle the HRMS for the whole of Betopia Group and work on Accounting, Sales, Inventory, Purchase, Manufacturing and Procurement.",
     stack: ["Odoo", "Python", "XML", "OWL", "PostgreSQL"],
     contributions: [
-      "HRMS and employee management",
-      "Attendance and leave management",
-      "Payroll workflows and HR documents",
-      "Management, KPI and procurement dashboards",
-      "Business process automation",
+      "HRMS for the whole company",
+      "Accounting, sales and CRM features",
+      "Inventory, purchase and procurement flows",
+      "Manufacturing (MRP) work",
+      "Custom modules, dashboards and reports",
     ],
     links: [],
-    note: "Company work is confidential. No proprietary code, screenshots or business data are shown.",
+    note: "Company work is private. No code, screenshots or business data are shown.",
   },
   {
     id: "research",
     index: "04",
-    kind: "Academic research · Thesis",
-    title: "Explainable Deep Learning for Ocular Disease Classification",
+    kind: "Research · Thesis",
+    title: "Explainable Deep Learning for Eye Disease Classification",
     description:
-      "Explainable Deep Learning Framework for Multi-Disease Ocular Classification and Myopia Severity Estimation, built on retinal fundus images from the ODIR-5K dataset.",
+      "Explainable Deep Learning Framework for Multi-Disease Ocular Classification and Myopia Severity Estimation, using eye images from the ODIR-5K dataset.",
     stack: ["Python", "ResNet50", "Transfer learning", "Grad-CAM", "SHAP"],
     contributions: [
-      "Multi-disease ocular classification on ODIR-5K",
-      "ResNet50 backbone with a custom classification head",
-      "Severity-aware myopia estimation",
-      "Explainability with Grad-CAM and SHAP visualizations",
+      "Finds several eye diseases from one image",
+      "ResNet50 model with a custom output layer",
+      "Estimates how severe myopia is",
+      "Shows why the model decided, with Grad-CAM and SHAP",
     ],
     links: [
       { label: "Research paper", href: "https://drive.google.com/file/d/1EkV9sDJQ2V4Pq7loVsDbD5z4v42Br2lD/view" },
@@ -242,30 +274,12 @@ export const research = {
 };
 
 export const services = [
-  {
-    title: "ERP Development & Customization",
-    body: "Custom Odoo modules, views and business logic that fit how an organization actually operates.",
-  },
-  {
-    title: "Backend Development",
-    body: "Reliable server-side systems in Python and Django with clean data models and clear business rules.",
-  },
-  {
-    title: "Full-Stack Web Development",
-    body: "End-to-end web applications with Django or Node.js on the backend and React on the frontend.",
-  },
-  {
-    title: "REST API Development",
-    body: "Well-structured, authenticated APIs that frontends and other systems can depend on.",
-  },
-  {
-    title: "Business Workflow Automation",
-    body: "Approvals, sequences, notifications and reports that replace manual, error-prone steps.",
-  },
-  {
-    title: "Database & System Integration",
-    body: "PostgreSQL data modelling and integrations that keep information consistent across systems.",
-  },
+  { title: "ERP Development", body: "Custom Odoo modules, screens and business rules that fit how a company works." },
+  { title: "Backend Development", body: "Reliable server code in Python and Django." },
+  { title: "Full-Stack Web Apps", body: "Complete web apps with Django on the backend and React on the frontend." },
+  { title: "REST APIs", body: "Clean, secure APIs that other apps can depend on." },
+  { title: "Workflow Automation", body: "Approvals, alerts and reports that replace manual work." },
+  { title: "Database & Integration", body: "PostgreSQL data models and links between systems." },
 ];
 
 export const education = [
