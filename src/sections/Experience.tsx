@@ -3,8 +3,6 @@ import { experience } from "@/data/content";
 import { gsap, ScrollTrigger, prefersReducedMotion, PLAY_ONCE } from "@/lib/motion";
 import { SectionHead } from "@/components/SectionHead";
 import { Icon } from "@/components/Icon";
-import city640 from "@/assets/img/city-640.webp";
-import city1100 from "@/assets/img/city-1100.webp";
 
 export function Experience() {
   const root = useRef<HTMLElement>(null);
@@ -46,24 +44,13 @@ export function Experience() {
         <div className="experience-aside">
           <div className="experience-sticky">
             <SectionHead
-              index="02"
+              index="03"
               label="Career journey"
               id="experience-title"
-              title="From first commit to enterprise ERP."
-              lede="A short, focused path: backend development at Robo Tech Valley, then enterprise software at Betopia Group."
+              title="From Django projects to company-wide ERP."
+              lede="I started with Python and Django at Robo Tech Valley. Today I work on ERP at Betopia Group."
             />
-            <div className="experience-photo reveal-img">
-              <img
-                src={city640}
-                srcSet={`${city640} 640w, ${city1100} 1100w`}
-                sizes="(max-width: 960px) 90vw, 30vw"
-                width={640}
-                height={877}
-                loading="lazy"
-                decoding="async"
-                alt="Sharat walking through Dhaka at night, seen from behind"
-              />
-            </div>
+
           </div>
         </div>
 
@@ -78,7 +65,16 @@ export function Experience() {
                 {r.period}
                 {r.current ? <span className="role-now">Current</span> : null}
               </p>
-              <h3 className="role-company reveal">{r.company}</h3>
+              <h3 className="role-company reveal">
+                {r.companyUrl ? (
+                  <a href={r.companyUrl} target="_blank" rel="noopener noreferrer" className="role-company-link">
+                    {r.company}
+                    <Icon name="external" size={18} />
+                  </a>
+                ) : (
+                  r.company
+                )}
+              </h3>
               <p className="role-title reveal">
                 {r.role}
                 {r.unit ? <span className="muted"> · {r.unit}</span> : null}

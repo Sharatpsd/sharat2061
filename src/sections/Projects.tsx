@@ -174,11 +174,11 @@ export function Projects() {
     <section ref={root} className="section projects" id="work" aria-labelledby="work-title">
       <div className="container">
         <SectionHead
-          index="03"
+          index="04"
           label="Selected work"
           id="work-title"
           title="Featured projects."
-          lede="Four pieces of work across full-stack development, ERP engineering and academic research."
+          lede="Four projects: a web app, an ERP module, my company work and my research."
         />
       </div>
       <div className="projects-stack container">

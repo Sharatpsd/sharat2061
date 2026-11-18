@@ -98,7 +98,7 @@ export function Contact() {
       <div className="contact-glow" aria-hidden="true" />
       <div className="container">
         <p className="eyebrow reveal">
-          <span className="eyebrow-index">08</span>
+          <span className="eyebrow-index">09</span>
           <span className="eyebrow-rule" aria-hidden="true" />
           Let&rsquo;s connect
         </p>

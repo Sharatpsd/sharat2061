@@ -6,7 +6,7 @@ export function Services() {
   return (
     <section className="section services" id="services" aria-labelledby="services-title">
       <div className="container">
-        <SectionHead index="05" label="What I do" id="services-title" title="Capabilities." />
+        <SectionHead index="06" label="What I do" id="services-title" title="What I can build for you." />
         <ol className="service-list">
           {services.map((s, i) => (
             <li key={s.title} className="service reveal">

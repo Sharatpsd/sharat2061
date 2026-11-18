@@ -1,14 +1,14 @@
 import { about, profile } from "@/data/content";
 import { SectionHead } from "@/components/SectionHead";
 import { SplitText } from "@/components/SplitText";
-import portrait560 from "@/assets/img/portrait-560.webp";
-import portrait900 from "@/assets/img/portrait-900.webp";
+import city640 from "@/assets/img/city-640.webp";
+import city1100 from "@/assets/img/city-1100.webp";
 
 const facts = [
   ["Role", profile.title],
-  ["Organization", profile.organization],
-  ["Department", "IT & Infrastructure — ERP, Cyber Security & MIS"],
-  ["Education", "B.Sc. in CSE, Green University of Bangladesh (2026)"],
+  ["Company", profile.organization],
+  ["Focus", "ERP: HRMS, Accounting, Sales"],
+  ["Education", "B.Sc. in CSE, Green University (2026)"],
   ["Based in", profile.location],
 ];
 
@@ -16,7 +16,7 @@ export function About() {
   return (
     <section className="section about" id="about" aria-labelledby="about-title">
       <div className="container">
-        <SectionHead index="01" label="About" id="about-title" title="Engineering for the way businesses work." />
+        <SectionHead index="01" label="About" id="about-title" title="A little about me." />
 
         <SplitText as="p" text={about.statement} className="statement scrub-words" />
 
@@ -24,14 +24,14 @@ export function About() {
           <figure className="about-portrait">
             <div className="reveal-img portrait-frame" data-cursor="Hello">
               <img
-                src={portrait900}
-                srcSet={`${portrait560} 560w, ${portrait900} 900w`}
+                src={city1100}
+                srcSet={`${city640} 640w, ${city1100} 1100w`}
                 sizes="(max-width: 760px) 90vw, 36vw"
-                width={900}
-                height={1350}
+                width={1100}
+                height={1507}
                 loading="lazy"
                 decoding="async"
-                alt="Portrait of Sharat Acharja Mugdho in a dark suit"
+                alt="Sharat walking through Dhaka at night, seen from behind"
               />
             </div>
             <figcaption className="reveal">

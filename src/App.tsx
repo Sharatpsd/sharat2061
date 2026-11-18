@@ -6,6 +6,7 @@ import { Cursor } from "@/components/Cursor";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
+import { ErpGalaxy } from "@/sections/ErpGalaxy";
 import { Experience } from "@/sections/Experience";
 import { Projects } from "@/sections/Projects";
 import { Expertise } from "@/sections/Expertise";
@@ -46,6 +47,7 @@ export default function App() {
       <main id="main" ref={main}>
         <Hero ready={ready} />
         <About />
+        <ErpGalaxy />
         <Experience />
         <Projects />
         <Expertise />
