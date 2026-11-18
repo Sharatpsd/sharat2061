@@ -31,6 +31,7 @@ npm run dev               # local dev server on :8080
 npm run build             # refreshes GitHub data, type-checks, builds to dist/
 npm run preview           # serve the production build
 npm run github:snapshot   # refresh src/data/github.json only
+npm run resume            # export resume/resume.html to public/Sharat_Acharja_Mugdho_Resume.pdf
 ```
 
 ## Deployment
